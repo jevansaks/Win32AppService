@@ -44,17 +44,17 @@
         <uap:SplashScreen Image="Images\SplashScreen.png" />
       </uap:VisualElements>
 		<Extensions>
-			<uap:Extension Category="windows.appService" EntryPoint="Win32App.BackgroundTask">
+			<uap:Extension Category="windows.appService" EntryPoint="RuntimeComponent.Class">
 				<uap3:AppService Name="com.microsoft.universalaction"/>
 			</uap:Extension>
-			<desktop:Extension Category="windows.fullTrustProcess" Executable="Win32App.exe" />
+			<!--<desktop:Extension Category="windows.fullTrustProcess" Executable="Win32App.exe" />
 			<com:Extension Category="windows.comServer">
 				<com:ComServer>
 					<com:ExeServer Executable="Win32App\Win32App.exe" Arguments="-RegisterProcessAsComServer" DisplayName="PackagedWin32AppService">
 						<com:Class Id="973166A5-ABC2-4F21-9DC8-5D80AF677DEC" DisplayName="Packaged Win32 App Service" />
 					</com:ExeServer>
 				</com:ComServer>
-			</com:Extension>
+			</com:Extension>-->
 		</Extensions>
 	</Application>
   </Applications>

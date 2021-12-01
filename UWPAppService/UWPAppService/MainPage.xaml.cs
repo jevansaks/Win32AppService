@@ -48,38 +48,23 @@ namespace UWPAppService
                 return;
             }
 
-            //// Call the service.
-            //int idx = int.Parse(textBox.Text);
-            //var message = new ValueSet();
-            //message.Add("Command", "Item");
-            //message.Add("ID", idx);
-            //AppServiceResponse response = await this.inventoryService.SendMessageAsync(message);
-            //string result = "";
+            // Call the service.
+            var message = new ValueSet();
+            message.Add("Command", "Item");
+            message.Add("ID", 42);
+            AppServiceResponse response = await connection.SendMessageAsync(message);
+            string result = "";
 
-            //if (response.Status == AppServiceResponseStatus.Success)
-            //{
-            //    // Get the data  that the service sent to us.
-            //    if (response.Message["Status"] as string == "OK")
-            //    {
-            //        result = response.Message["Result"] as string;
-            //    }
-            //}
+            if (response.Status == AppServiceResponseStatus.Success)
+            {
+                // Get the data  that the service sent to us.
+                //if (response.Message["Status"] as string == "OK")
+                {
+                    result = response.Message["Result"] as string;
+                }
+            }
 
-            //message.Clear();
-            //message.Add("Command", "Price");
-            //message.Add("ID", idx);
-            //response = await this.inventoryService.SendMessageAsync(message);
-
-            //if (response.Status == AppServiceResponseStatus.Success)
-            //{
-            //    // Get the data that the service sent to us.
-            //    if (response.Message["Status"] as string == "OK")
-            //    {
-            //        result += " : Price = " + response.Message["Result"] as string;
-            //    }
-            //}
-
-            //textBox.Text = result;
+            textBox.Text = result;
 
         }
     }

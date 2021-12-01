@@ -9,6 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button Content="Connect to App Service" Click="Button_Click"/>
+        <StackPanel Orientation="Vertical">
+            <Button Content="Connect to App Service" Click="Button_Click"/>
+            <TextBox x:Name="textBox"/>
+        </StackPanel>
     </Grid>
 </Page>

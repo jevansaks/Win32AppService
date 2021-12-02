@@ -11,14 +11,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="Class.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="AppService.cpp" />
+    <ClCompile Include="AppServiceProxy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="AppServiceProxy.h" />
+    <ClInclude Include="AppService.h" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="Class.idl" />
+    <Midl Include="RuntimeComponent.idl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="RuntimeComponent.def" />

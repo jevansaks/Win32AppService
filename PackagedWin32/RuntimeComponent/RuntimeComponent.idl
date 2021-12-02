@@ -1,0 +1,17 @@
+namespace RuntimeComponent
+{
+    [default_interface]
+    runtimeclass AppServiceProxy : Windows.ApplicationModel.Background.IBackgroundTask
+    {
+        AppServiceProxy();
+    }
+
+    [default_interface]
+    runtimeclass AppService : 
+        //Windows.UI.Xaml.Automation.Provider.IInvokeProvider,
+        //Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs,
+        Windows.Foundation.Collections.IMap<String, Object>
+    {
+        AppService();
+    }
+}

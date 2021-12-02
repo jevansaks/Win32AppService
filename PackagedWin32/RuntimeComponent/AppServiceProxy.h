@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "Class.g.h"
+#include "AppServiceProxy.g.h"
 
 #include <winrt\Windows.ApplicationModel.Background.h>
 #include <winrt\Windows.ApplicationModel.AppService.h>
@@ -17,9 +17,9 @@ namespace winrt
 
 namespace winrt::RuntimeComponent::implementation
 {
-    struct Class : ClassT<Class, winrt::Windows::ApplicationModel::Background::IBackgroundTask>
+    struct AppServiceProxy : AppServiceProxyT<AppServiceProxy>
     {
-        Class();
+        AppServiceProxy();
 
         int32_t MyProperty();
         void MyProperty(int32_t value);
@@ -35,7 +35,7 @@ namespace winrt::RuntimeComponent::implementation
 
 namespace winrt::RuntimeComponent::factory_implementation
 {
-    struct Class : ClassT<Class, implementation::Class>
+    struct AppServiceProxy : AppServiceProxyT<AppServiceProxy, implementation::AppServiceProxy>
     {
     };
 }
